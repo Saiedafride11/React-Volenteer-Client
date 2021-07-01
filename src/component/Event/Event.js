@@ -1,0 +1,23 @@
+import React from 'react';
+
+const Event = ({event}) => {
+    document.title = 'Event'
+    console.log("Hello", event.pic);
+
+    const deleteEvent = id => {
+
+    }
+    return (
+        <div className="col-md-3">
+            {/* <img style={{height:'300px'}} src={require(`../../images/${event.pic}`)} alt="" /> */}
+
+            
+            {/* <img style={{height:'300px'}} src={event.pic} alt="" /> */}
+
+            <img style={{height:'300px'}} src={event.imageURL} alt="" />
+            <h3>{event.name} <button onClick={() => deleteEvent(event._id)}>Delete</button></h3>
+        </div>
+    );
+};
+
+export default Event;
